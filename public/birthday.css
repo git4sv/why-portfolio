@@ -38,7 +38,7 @@ body {
   border-radius: 15px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   text-align: center;
   background-color: #fff;
@@ -124,4 +124,25 @@ textarea {
   .left {
     height: 200px;
   }
+}
+
+/* Tailwind CSS classes */
+.container {
+  @apply items-center justify-center;
+}
+
+.registration-box {
+  @apply mx-auto;
+}
+
+.left {
+  @apply w-full;
+}
+
+.right {
+  @apply text-center;
+}
+
+.btn {
+  @apply mt-6;
 }
