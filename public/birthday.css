@@ -1,70 +1,136 @@
-.RecipieBanner_slide__k5QV4 .swiper-button-prev {
-    top: 40%;
-    width: 5rem!important;
-    height: 7.5rem!important;
-    left: -1.5rem!important;
-    transform: scale(.5);
-    display: block!important;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.RecipieBanner_slide__k5QV4 .swiper-button-next {
-    top: 40%;
-    width: 5rem!important;
-    height: 7.5rem!important;
-    right: -1.5rem!important;
-    transform: scale(.5);
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #9BE5FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.RecipieBanner_slide__k5QV4 .swiper-slide {
-    height: auto!important;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Container styles */
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+  position: relative;
 }
 
-@media (min-width: 900px) and (max-width:1280px) {
-    .RecipieBanner_slide__k5QV4 .swiper-button-next {
-        top:40%;
-        width: 5rem!important;
-        height: 7.5rem!important;
-        right: -1.5rem!important;
-        transform: scale(.5);
-    }
-
-    .RecipieBanner_slide__k5QV4 .swiper-button-prev {
-        top: 40%;
-        width: 5rem!important;
-        height: 7.5rem!important;
-        left: -1.5rem!important;
-        transform: scale(.5);
-        display: block!important;
-    }
+.container:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
-@media (min-width: 1200px) {
-    .RecipieBanner_slide__k5QV4 .swiper-slide {
-        width:375px;
-        margin-right: 18px;
-        min-width: 375px;
-        max-width: 375px;
-    }
+/* Registration box styles */
+.registration-box {
+  max-width: 850px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.19);
 }
 
-@media (min-width: 900px) and (max-width:1199px) {
-    .RecipieBanner_slide__k5QV4 .swiper-slide {
-        width:361px;
-        margin-right: 18px;
-        min-width: 361px;
-        max-width: 361px;
-    }
+/* ... */
+/* Left and right panel styles */
+.left {
+  background: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80') no-repeat center;
+  background-size: cover;
+  border-radius: 15px 0px 0px 15px;
+}
+/* ... */
+
+
+.right {
+  padding: 25px 40px;
 }
 
-@media (min-width: 0px) and (max-width:899px) {
-    .RecipieBanner_slide__k5QV4 .swiper-slide {
-        width:333px;
-        margin-right: 18px;
-        min-width: 333px;
-        max-width: 333px;
-    }
+/* Heading styles */
+h2 {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #7868e6;
+}
+
+/* Form field styles */
+.field {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: all 0.3s ease;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus {
+  border-color: rgba(30, 85, 250, 0.47);
+  background-color: #fff;
+}
+
+/* Textarea styles */
+textarea {
+  min-height: 150px;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 6px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: skyblue;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7968e6ca;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 880px) {
+  .registration-box {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    height: 200px;
+  }
 }
